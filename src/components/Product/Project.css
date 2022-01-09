@@ -1,0 +1,80 @@
+.project-container {
+	width: 100%;
+	height: 40vh;
+	margin: 20px 10px;
+	border: 2px solid rgb(243, 242, 242);
+	border-radius: 10px 10px 0 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.project-browser {
+	height: 30px;
+	width: 100%;
+	background-color: rgb(243, 242, 242);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+div.project-browser-icon {
+	width: 30px;
+	margin-left: 8px;
+	flex: 1;
+}
+
+div.project-browser-url {
+	flex: 4;
+	width: 70%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	border-radius: 4px;
+	margin-right: 20px;
+	font-size: 14px;
+}
+
+div.project-browser-icon,
+div.project-browser-url {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.project-browser-icon svg,
+.project-browser-url div {
+	padding: 2px;
+	height: 100%;
+	width: 100%;
+}
+
+.project-browser-icon svg {
+	width: 40px;
+	position: absolute;
+	left: 0;
+}
+
+.project-image {
+	width: 100%;
+	height: 100%;
+	object-position: center;
+	object-fit: fill;
+	position: relative;
+}
+
+.project-github-logo,
+.project-web-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 999999999;
+}
+
+.project-github-logo i,
+.project-web-logo i {
+	color: #fff;
+	font-size: 20px;
+}
