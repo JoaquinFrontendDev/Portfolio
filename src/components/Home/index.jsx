@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Home.css'
 import './Navbar.css'
 import Vector from '../../assets/images/laptop-vector.png'
@@ -19,7 +19,7 @@ const Home = () => {
 						</a>
 					</li>
 					<li>
-						<a href='#projects' className='nav-link'>
+						<a href='#work' className='nav-link'>
 							My Work
 						</a>
 					</li>

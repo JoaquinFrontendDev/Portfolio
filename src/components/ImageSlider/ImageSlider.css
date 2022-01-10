@@ -1,0 +1,148 @@
+.slider-container {
+	max-width: 100vw;
+	width: 100%;
+	height: 600px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	margin: auto;
+}
+
+.slider-img {
+	width: 1000px;
+	margin: auto;
+	height: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.slider-img img {
+	object-fit: scale-down;
+	object-position: center;
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+.left-arrow {
+	position: absolute;
+	left: 120px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 3rem;
+	color: var(--color-black);
+	cursor: pointer;
+	user-select: none;
+}
+
+.right-arrow {
+	position: absolute;
+	right: 120px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 3rem;
+	color: var(--color-black);
+	cursor: pointer;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+	opacity: 0.9;
+}
+
+.slide {
+	opacity: 0;
+	transition-duration: 1s ease;
+}
+
+.slide-active {
+	opacity: 1;
+	transition-duration: 1.2s;
+	transform: scale(1.05);
+}
+
+.slider-modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 10px;
+	transition: all 350ms;
+	opacity: 0;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.slider-modal:hover {
+	opacity: 1;
+}
+
+.slider-modal-text {
+	flex: 1;
+	width: 100%;
+	padding: 1em 2em;
+	text-align: center;
+	color: var(--bg-color);
+}
+
+.slider-modal h3 {
+	font-size: clamp(20px, 2vw, 25px);
+	padding: 3em;
+}
+
+.slider-modal p {
+	font-size: clamp(10px, 1.5vw, 12px);
+	padding: 0 2em;
+	font-weight: bold;
+	width: 70%;
+	text-overflow: ellipsis;
+	margin: auto;
+}
+
+.slider-icons {
+	flex: 1;
+	display: flex;
+	gap: 2em;
+	font-size: 35px;
+}
+
+.slider-icons i {
+	color: var(--color-primary);
+}
+
+.slider-icons i:hover {
+	transform: scale(1.2);
+}
+
+@media screen and (max-width: 500px) {
+	.left-arrow,
+	.right-arrow {
+		z-index: 99999999999;
+		font-size: 30px;
+		color: var(--bg-color);
+	}
+	.left-arrow {
+		left: 40px;
+	}
+	.right-arrow {
+		right: 40px;
+	}
+	.slider-img {
+		width: 350px;
+		height: 300px;
+	}
+	.slider-modal h3 {
+		padding: 1.5em;
+	}
+	.slider-modal p {
+		width: 100%;
+	}
+}
