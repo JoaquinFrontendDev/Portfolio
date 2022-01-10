@@ -69,7 +69,7 @@
 .subtitle-dynamic li {
 	list-style: none;
 	color: var(--color-black);
-	font-size: 22px;
+	font-size: 20px;
 	top: 0;
 	position: relative;
 	animation: slide 20s steps(4) infinite;
