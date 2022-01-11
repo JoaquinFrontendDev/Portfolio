@@ -4,10 +4,11 @@ import { products } from '../../data'
 import './Works.css'
 
 const Works = () => {
-	const [width, setWidth] = useState(0)
+	const [width, setWidth] = useState(window.innerWidth)
 	useEffect(() => {
 		function handleResize() {
 			setWidth(window.innerWidth)
+			console.log(width)
 		}
 		window.addEventListener('resize', handleResize)
 	}, [])

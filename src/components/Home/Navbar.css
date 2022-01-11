@@ -7,7 +7,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	background-color: #fff;
+	background-color: var(--bg-color);
 	z-index: 999999;
 	height: 8vh;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -19,7 +19,7 @@
 
 .navbar a {
 	text-decoration: none;
-	color: #333;
+	color: var(--color-black);
 	font-size: clamp(10px, 2vw, 16px);
 	padding: 12px;
 	border-radius: 10px;

@@ -191,11 +191,12 @@ div.icon {
 	width: 460px;
 	height: 120px;
 	border-radius: 10px;
-	overflow: hidden;
+	margin-bottom: 3em;
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
 .services-tech-title::before {
@@ -229,7 +230,7 @@ div.icon {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	margin: 1em auto;
+	margin: 2em auto;
 	gap: 2em;
 	flex-wrap: wrap;
 }
@@ -237,6 +238,9 @@ div.icon {
 .techs-images img {
 	height: 80px;
 	width: 100px;
+}
+
+.techs-images:hover {
 }
 
 @media screen and (max-width: 500px) {

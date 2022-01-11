@@ -2,34 +2,47 @@ import React from 'react'
 import './Home.css'
 import './Navbar.css'
 import Vector from '../../assets/images/laptop-vector.png'
+import { motion } from 'framer-motion'
 
 const Home = () => {
 	return (
 		<>
-			<nav className='navbar'>
+			<motion.nav className='navbar'>
 				<ul className='nav-items'>
-					<li>
+					<motion.li
+						initial={{ y: -250, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.5, type: 'spring', stiffness: 50 }}>
 						<a href='#home' className='nav-link'>
 							Home
 						</a>
-					</li>
-					<li>
+					</motion.li>
+					<motion.li
+						initial={{ y: -250, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.6, type: 'spring', stiffness: 50 }}>
 						<a href='#services' className='nav-link'>
 							Services
 						</a>
-					</li>
-					<li>
+					</motion.li>
+					<motion.li
+						initial={{ y: -250, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.7, type: 'spring', stiffness: 50 }}>
 						<a href='#work' className='nav-link'>
 							My Work
 						</a>
-					</li>
-					<li>
+					</motion.li>
+					<motion.li
+						initial={{ y: -250, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.8, type: 'spring', stiffness: 50 }}>
 						<a href='#contact' className='nav-link'>
 							Contact
 						</a>
-					</li>
+					</motion.li>
 				</ul>
-			</nav>
+			</motion.nav>
 			<div className='wrapper' id='home'>
 				<div className='left-box'>
 					<div className='left-wrapper'>
@@ -52,7 +65,9 @@ const Home = () => {
 							My main goal is building high quality code with best practices
 							every single time.
 						</div>
-						<button className='cta-btn'>Let's talk</button>
+						<a href='#contact'>
+							<button className='cta-btn'>Let's talk</button>
+						</a>
 					</div>
 				</div>
 				<div className='right-box'>

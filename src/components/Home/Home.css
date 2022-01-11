@@ -24,11 +24,13 @@
 .wrapper-intro {
 	font-size: clamp(2em, 2.5vw, 4em);
 	font-weight: 300;
+	color: var(--color-black);
 }
 
 h1.wrapper-presentation {
 	font-size: clamp(2.5em, 3vw, 60px);
 	font-weight: bold;
+	color: var(--color-black);
 }
 
 .wrapper-description {
@@ -36,6 +38,7 @@ h1.wrapper-presentation {
 	padding-right: 2em;
 	text-align: left;
 	font-size: clamp(1em, 1.5vw, 2.3vmin);
+	color: var(--color-black);
 }
 
 .left-wrapper-title {
