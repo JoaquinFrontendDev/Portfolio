@@ -1,8 +1,12 @@
 import React, { useRef } from 'react'
 import './Contact.css'
 import emailjs from '@emailjs/browser'
+import { ThemeContext } from '../../context'
+import { useContext } from 'react'
 
 const Contact = () => {
+	const theme = useContext(ThemeContext)
+	const darkMode = theme.state.darkMode
 	const form = useRef()
 	const sendEmail = (e) => {
 		e.preventDefault()
@@ -31,43 +35,80 @@ const Contact = () => {
 			</div>
 			<div className='contact-wrapper'>
 				<div className='left-contact-section'>
-					<h2>Say Hello 🙋‍♂️</h2>
+					<h2 style={{ color: darkMode && 'var(--bg-color)' }}>Say Hello 🙋‍♂️</h2>
 					<div className='contact-socials'>
 						<div className='contact-section-item'>
-							<a href=''>
-								<span className='fab fa-linkedin'></span>
+							<a
+								href='https://www.linkedin.com/in/joaquin-retola-noya-702bb9216/'
+								target='_blank'
+								rel='noreferrer'>
+								<span
+									className='fab fa-linkedin'
+									style={{ color: darkMode && 'var(--bg-color)' }}></span>
 							</a>
-							<h3>Joaquin Retola Noya</h3>
+							<h3 style={{ color: darkMode && 'var(--bg-color)' }}>
+								Joaquin Retola Noya
+							</h3>
 						</div>
 						<div className='contact-section-item'>
-							<a href=''>
-								<span className='fab fa-github'></span>
+							<a
+								href='https://github.com/SintaxisDev'
+								target='_blank'
+								rel='noreferrer'>
+								<span
+									className='fab fa-github'
+									style={{ color: darkMode && 'var(--bg-color)' }}></span>
 							</a>
-							<h3>SintaxisDev</h3>
+							<h3 style={{ color: darkMode && 'var(--bg-color)' }}>
+								SintaxisDev
+							</h3>
 						</div>
-						<div className='contact-section-item'>
-							<a href=''>
-								<span className='far fa-envelope'></span>
+						<div
+							className='contact-section-item'
+							target='_blank'
+							rel='noreferrer'>
+							<a href='https://mail.google.com/mail/?view=cm&source=mailto&to=joaquin.retola@gmail.com'>
+								<span
+									className='far fa-envelope'
+									style={{ color: darkMode && 'var(--bg-color)' }}></span>
 							</a>
-							<h3>joaquin.retola@gmail.com</h3>
+							<h3 style={{ color: darkMode && 'var(--bg-color)' }}>
+								joaquin.retola@gmail.com
+							</h3>
 						</div>
-						<div className='contact-section-item'>
-							<a href=''>
-								<span className='fab fa-twitter'></span>
+						<div
+							className='contact-section-item'
+							target='_blank'
+							rel='noreferrer'>
+							<a href='https://twitter.com/JoacoRetola'>
+								<span
+									className='fab fa-twitter'
+									style={{ color: darkMode && 'var(--bg-color)' }}></span>
 							</a>
-							<h3>JoacoRetola</h3>
+							<h3 style={{ color: darkMode && 'var(--bg-color)' }}>
+								JoacoRetola
+							</h3>
 						</div>
-						<div className='contact-section-item'>
-							<a href=''>
-								<span className='fab fa-instagram'></span>
+						<div
+							className='contact-section-item'
+							target='_blank'
+							rel='noreferrer'>
+							<a href='https://www.instagram.com/joacoretola/'>
+								<span
+									className='fab fa-instagram'
+									style={{ color: darkMode && 'var(--bg-color)' }}></span>
 							</a>
-							<h3>JoacoRetola</h3>
+							<h3 style={{ color: darkMode && 'var(--bg-color)' }}>
+								JoacoRetola
+							</h3>
 						</div>
 					</div>
 				</div>
 				<div className='right-contact-section'>
 					<div className='contact-box'>
-						<p className='contact-section-p'>
+						<p
+							className='contact-section-p'
+							style={{ color: darkMode && 'var(--bg-color)' }}>
 							<b>What's your idea?</b> Tell me about that project that it
 							hovering in your head
 						</p>

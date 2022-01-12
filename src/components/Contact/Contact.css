@@ -6,7 +6,7 @@
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	margin: 6em auto;
+	margin: 5em auto;
 }
 
 .contact-title {
@@ -128,7 +128,7 @@
 .contact-section-item a span {
 	width: 50px;
 	color: var(--color-black);
-	font-size: 25px;
+	font-size: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -139,7 +139,7 @@
 	color: var(--color-primary);
 }
 
-/********************** LEFT CONTACT SECTION ******************/
+/********************** RIGHT CONTACT SECTION ******************/
 
 .right-contact-section {
 	display: flex;
@@ -172,6 +172,7 @@
 	flex-direction: column;
 	width: 90%;
 	height: 100%;
+	margin-top: 1em;
 }
 
 .contact-form input,
@@ -195,7 +196,6 @@
 .form-input {
 	width: 100%;
 	position: relative;
-	overflow-x: hidden;
 }
 
 .form-input input:focus ~ label,
@@ -203,56 +203,78 @@
 .form-input textarea:focus ~ label,
 .form-input textarea:valid ~ label {
 	transform: translateY(-30px) scale(0.85);
-	left: -1%;
+	left: -0.75%;
 	transition: all 500ms ease-in-out;
 	color: var(--color-primary);
 }
 
+.form-input textarea:focus ~ label,
+.form-input textarea:valid ~ label {
+	left: -1%;
+}
+
+.form-input input:valid ~ .underline-1,
+.form-input input:valid ~ .underline-2,
+.form-input input:valid ~ .underline-3,
+.form-input input:valid ~ .underline-4 {
+	transform: scale(1);
+}
+
 .form-input .underline-1 {
 	position: absolute;
-	left: -100%;
+	left: 0;
 	bottom: 37%;
 	height: 3px;
+	transform: scaleX(0);
 	width: 100%;
 	background-color: var(--color-primary);
-	transition: all 0.4s ease;
+	transition: all 0.4s ease-in;
 }
 
 .form-input .underline-2 {
 	position: absolute;
-	left: -100%;
+	left: 0;
 	bottom: 37%;
 	height: 3px;
+	transform: scaleX(0);
 	width: 100%;
 	background-color: var(--color-primary);
-	transition: all 0.4s ease;
+	transition: all 0.4s ease-in;
 }
 
 .form-input .underline-3 {
 	position: absolute;
-	left: -100%;
+	left: 0;
 	bottom: 37%;
 	height: 3px;
+	transform: scaleX(0);
 	width: 100%;
 	background-color: var(--color-primary);
-	transition: all 0.4s ease;
+	transition: all 0.4s ease-in;
 }
 
 .form-input .underline-4 {
 	position: absolute;
-	left: -100%;
+	left: 0;
 	bottom: 30%;
 	height: 3px;
+	transform: scaleX(0);
 	width: 100%;
 	background-color: var(--color-primary);
-	transition: all 0.4s ease;
+	transition: all 0.4s ease-in;
+}
+
+@-moz-document url-prefix() {
+	.form-input .underline-4 {
+		bottom: 24%;
+	}
 }
 
 .form-input input:focus ~ .underline-1,
 .form-input input:focus ~ .underline-2,
 .form-input input:focus ~ .underline-3,
 .form-input textarea:focus ~ .underline-4 {
-	left: 0;
+	transform: scaleX(1);
 }
 
 .contact-form input {
@@ -270,11 +292,12 @@
 	top: 10%;
 	pointer-events: none;
 	color: gray;
+	font-weight: bold;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-	background-color: rgba(0, 0, 0, 0.1);
+	background-color: rgba(56, 94, 151, 0.3);
 }
 
 .contact-form button {

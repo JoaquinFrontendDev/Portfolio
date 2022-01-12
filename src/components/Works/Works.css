@@ -19,7 +19,7 @@
 	flex-direction: column;
 	gap: 4em;
 	height: 100%;
-	margin: 4em auto;
+	margin: 5em auto;
 }
 
 .works-title {
@@ -81,7 +81,7 @@
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: var(--bg-color);
+	background-color: inherit;
 	animation: typewriter 5s steps(38) infinite;
 }
 
@@ -130,7 +130,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	gap: 4em;
+	gap: 3em;
 }
 
 .works-flex {
@@ -199,7 +199,7 @@
 }
 
 .works-modal p {
-	font-size: clamp(6px, 1.5vw, 12px);
+	font-size: clamp(7px, 1.5vw, 12px);
 	padding: 0 2em;
 	font-weight: bold;
 	width: 70%;

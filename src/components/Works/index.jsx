@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react'
 import ImageSlider from '../ImageSlider'
 import { products } from '../../data'
 import './Works.css'
+import { ThemeContext } from '../../context'
+import { useContext } from 'react'
 
 const Works = () => {
+	const theme = useContext(ThemeContext)
+	const darkMode = theme.state.darkMode
 	const [width, setWidth] = useState(window.innerWidth)
 	useEffect(() => {
 		function handleResize() {
 			setWidth(window.innerWidth)
-			console.log(width)
 		}
 		window.addEventListener('resize', handleResize)
 	}, [])
@@ -18,18 +21,28 @@ const Works = () => {
 				<div className='works-title'></div>
 				<div className='subtitle-wrapper'>
 					<div className='subtitle-static'></div>
-					<ul className='subtitle-dynamic'>
+					<ul
+						className='subtitle-dynamic'
+						style={{ backgroundColor: darkMode && 'var(--black-color)' }}>
 						<li>
-							<span>Awesome experiences are waiting 🏃</span>
+							<span style={{ color: darkMode && 'var(--bg-color)' }}>
+								Awesome experiences are waiting 🏃
+							</span>
 						</li>
 						<li>
-							<span>Let's put some work to your idea 💡</span>
+							<span style={{ color: darkMode && 'var(--bg-color)' }}>
+								Let's put some work to your idea 💡
+							</span>
 						</li>
 						<li>
-							<span>Do not be afraid to go big 💪</span>
+							<span style={{ color: darkMode && 'var(--bg-color)' }}>
+								Do not be afraid to go big 💪
+							</span>
 						</li>
 						<li>
-							<span>Sky rocket your company today 🚀</span>
+							<span style={{ color: darkMode && 'var(--bg-color)' }}>
+								Sky rocket your company today 🚀
+							</span>
 						</li>
 					</ul>
 				</div>

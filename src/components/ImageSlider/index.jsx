@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import { products } from '../../data'
 import './ImageSlider.css'
+import { ThemeContext } from '../../context'
+import { useContext } from 'react'
 
 const ImageSlider = () => {
+	const theme = useContext(ThemeContext)
+	const darkMode = theme.state.darkMode
 	const [current, setCurrent] = useState(0)
 	const length = products.length
 	if (!Array.isArray(products) || length === 0) return null
@@ -17,9 +21,11 @@ const ImageSlider = () => {
 		<div className='slider-container'>
 			<i
 				className='fas fa-arrow-alt-circle-left left-arrow'
+				style={{ color: darkMode && 'var(--bg-color)' }}
 				onClick={prevSlide}></i>
 			<i
 				className='fas fa-arrow-alt-circle-right right-arrow'
+				style={{ color: darkMode && 'var(--bg-color)' }}
 				onClick={nextSlide}></i>
 			{products.map((product, index) => {
 				return (

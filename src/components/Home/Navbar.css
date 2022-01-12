@@ -13,11 +13,28 @@
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.navbar ul {
+.navbar-darkmode {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: var(--bg-color);
+	z-index: 999999;
+	height: 8vh;
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.navbar ul,
+.navbar-darkmode ul {
 	list-style: none;
 }
 
-.navbar a {
+.navbar a,
+.navbar-darkmode a {
 	text-decoration: none;
 	color: var(--color-black);
 	font-size: clamp(10px, 2vw, 16px);
