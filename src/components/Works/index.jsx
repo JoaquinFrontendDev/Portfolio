@@ -56,7 +56,12 @@ const Works = () => {
 				) : (
 					products.map((product) => (
 						<div className='works-flex'>
-							<img src={product.img} alt='cars' className='works-img' />
+							<img
+								src={product.img}
+								alt='portfolio'
+								key={product.id}
+								className='works-img'
+							/>
 							<div className='works-modal'>
 								<div className='works-modal-text'>
 									<h3>{product.title}</h3>
