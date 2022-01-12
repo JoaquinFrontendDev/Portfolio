@@ -31,7 +31,10 @@ const Contact = () => {
 	return (
 		<>
 			<div className='contact-header' id='contact'>
-				<div className='contact-title'></div>
+				<div
+					className={
+						darkMode ? 'contact-title dark-mode-title' : 'contact-title'
+					}></div>
 			</div>
 			<div className='contact-wrapper'>
 				<div className='left-contact-section'>

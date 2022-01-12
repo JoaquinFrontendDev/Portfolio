@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './Services.css'
-import { motion, useAnimation } from 'framer-motion'
+import { DragControls, motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { ThemeContext } from '../../context'
 import { useContext } from 'react'
@@ -23,7 +23,10 @@ const Services = () => {
 	return (
 		<div className='services-container' id='services'>
 			<div className='services-top'>
-				<div className='services-title'></div>
+				<div
+					className={
+						darkMode ? 'services-title dark-mode-title' : 'services-title'
+					}></div>
 			</div>
 			<div className='services-bottom'>
 				<div className='services-item'>
@@ -102,7 +105,12 @@ const Services = () => {
 				</div>
 			</div>
 			<div className='services-tech'>
-				<div className='services-tech-title'></div>
+				<div
+					className={
+						darkMode
+							? 'services-tech-title dark-mode-title'
+							: 'services-tech-title'
+					}></div>
 				<div className='techs-images' ref={ref}>
 					<motion.img
 						animate={animation}

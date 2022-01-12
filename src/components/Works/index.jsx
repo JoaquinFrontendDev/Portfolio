@@ -18,7 +18,10 @@ const Works = () => {
 	return (
 		<div className='works-container' id='work'>
 			<div className='works-top'>
-				<div className='works-title'></div>
+				<div
+					className={
+						darkMode ? 'works-title dark-mode-title' : 'works-title'
+					}></div>
 				<div className='subtitle-wrapper'>
 					<div className='subtitle-static'></div>
 					<ul

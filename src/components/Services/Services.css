@@ -40,6 +40,7 @@
 	position: absolute;
 	animation: rotate 5s linear infinite;
 }
+
 .services-title::after {
 	content: 'Services';
 	width: 305px;
@@ -53,6 +54,15 @@
 	color: var(--color-black);
 	font-size: clamp(30px, 2.5vw, 60px);
 	font-weight: bold;
+}
+
+.dark-mode-title::before {
+	background-image: conic-gradient(transparent 180deg, var(--bg-color) 90deg);
+}
+
+.dark-mode-title::after {
+	background: var(--color-primary);
+	color: var(--bg-color);
 }
 
 @keyframes rotate {

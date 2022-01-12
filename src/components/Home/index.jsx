@@ -1,66 +1,24 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Home.css'
-import './Navbar.css'
 import { Vector } from './Vector'
-import { motion } from 'framer-motion'
 import { ThemeContext } from '../../context'
+import Navbar from '../Navbar'
+import Sidebar from '../Sidebar'
 
 const Home = () => {
 	const theme = useContext(ThemeContext)
 	const darkMode = theme.state.darkMode
-
+	const [width, setWidth] = useState(window.innerWidth)
+	useEffect(() => {
+		function handleResize() {
+			setWidth(window.innerWidth)
+		}
+		window.addEventListener('resize', handleResize)
+	}, [])
 	return (
 		<>
-			<motion.nav
-				className={darkMode ? 'navbar-darkmode' : 'navbar'}
-				style={{ backgroundColor: darkMode && '#070707' }}>
-				<ul className='nav-items'>
-					<motion.li
-						initial={{ y: -250, opacity: 0 }}
-						animate={{ y: 0, opacity: 1 }}
-						transition={{ delay: 0.5, type: 'spring', stiffness: 50 }}>
-						<a
-							href='#home'
-							className='nav-link'
-							style={{ color: darkMode && '#fff' }}>
-							Home
-						</a>
-					</motion.li>
-					<motion.li
-						initial={{ y: -250, opacity: 0 }}
-						animate={{ y: 0, opacity: 1 }}
-						transition={{ delay: 0.6, type: 'spring', stiffness: 50 }}>
-						<a
-							href='#services'
-							className='nav-link'
-							style={{ color: darkMode && '#fff' }}>
-							Services
-						</a>
-					</motion.li>
-					<motion.li
-						initial={{ y: -250, opacity: 0 }}
-						animate={{ y: 0, opacity: 1 }}
-						transition={{ delay: 0.7, type: 'spring', stiffness: 50 }}>
-						<a
-							href='#work'
-							className='nav-link'
-							style={{ color: darkMode && '#fff' }}>
-							My Work
-						</a>
-					</motion.li>
-					<motion.li
-						initial={{ y: -250, opacity: 0 }}
-						animate={{ y: 0, opacity: 1 }}
-						transition={{ delay: 0.8, type: 'spring', stiffness: 50 }}>
-						<a
-							href='#contact'
-							className='nav-link'
-							style={{ color: darkMode && '#fff' }}>
-							Contact
-						</a>
-					</motion.li>
-				</ul>
-			</motion.nav>
+			{width < 700 ? <Sidebar /> : <Navbar />}
+
 			<div className='wrapper' id='home'>
 				<div className='left-box'>
 					<div className='left-wrapper'>

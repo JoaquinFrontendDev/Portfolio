@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react'
 import Home from './components/Home'
 import Services from './components/Services'
 import Works from './components/Works'
@@ -11,7 +12,7 @@ function App() {
 	const theme = useContext(ThemeContext)
 	const darkMode = theme.state.darkMode
 	return (
-		<div style={{ backgroundColor: darkMode && '#070707' }}>
+		<div style={{ backgroundColor: darkMode && 'var(--color-black' }}>
 			<Toggle />
 			<Home />
 			<Services />

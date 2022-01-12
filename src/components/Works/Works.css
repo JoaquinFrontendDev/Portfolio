@@ -58,6 +58,15 @@
 	font-weight: bold;
 }
 
+.dark-mode-title::before {
+	background-image: conic-gradient(transparent 180deg, var(--bg-color) 90deg);
+}
+
+.dark-mode-title::after {
+	background: var(--color-primary);
+	color: var(--bg-color);
+}
+
 .subtitle-dynamic {
 	line-height: 50px;
 	height: 50px;
@@ -124,7 +133,7 @@
 
 .works-bottom {
 	flex: 1;
-	min-height: 100vh;
+	min-height: 80vh;
 	height: 100%;
 	display: flex;
 	justify-content: center;
