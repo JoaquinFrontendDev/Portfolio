@@ -18,7 +18,7 @@ const Toggle = () => {
 			<motion.div
 				className='toggle-button'
 				onClick={handleClick}
-				style={{ left: darkMode ? 0 : 25 }}
+				style={{ left: darkMode ? 0 : 30 }}
 				layout
 				transition={spring}></motion.div>
 		</div>
