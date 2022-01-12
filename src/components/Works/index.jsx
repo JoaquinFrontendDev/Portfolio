@@ -24,25 +24,23 @@ const Works = () => {
 					}></div>
 				<div className='subtitle-wrapper'>
 					<div className='subtitle-static'></div>
-					<ul
-						className='subtitle-dynamic'
-						style={{ backgroundColor: darkMode && 'var(--black-color)' }}>
-						<li>
+					<ul className='subtitle-dynamic'>
+						<li className={darkMode ? 'dark-mode-li' : ''}>
 							<span style={{ color: darkMode && 'var(--bg-color)' }}>
 								Awesome experiences are waiting 🏃
 							</span>
 						</li>
-						<li>
+						<li className={darkMode ? 'dark-mode-li' : ''}>
 							<span style={{ color: darkMode && 'var(--bg-color)' }}>
 								Let's put some work to your idea 💡
 							</span>
 						</li>
-						<li>
+						<li className={darkMode ? 'dark-mode-li' : ''}>
 							<span style={{ color: darkMode && 'var(--bg-color)' }}>
 								Do not be afraid to go big 💪
 							</span>
 						</li>
-						<li>
+						<li className={darkMode ? 'dark-mode-li' : ''}>
 							<span style={{ color: darkMode && 'var(--bg-color)' }}>
 								Sky rocket your company today 🚀
 							</span>

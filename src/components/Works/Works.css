@@ -90,7 +90,17 @@
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: inherit;
+	background-color: var(--bg-color);
+	animation: typewriter 5s steps(38) infinite;
+}
+
+.subtitle-dynamic .dark-mode-li::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--color-black);
 	animation: typewriter 5s steps(38) infinite;
 }
 

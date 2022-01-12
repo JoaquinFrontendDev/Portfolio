@@ -112,29 +112,69 @@ const Contact = () => {
 						<p
 							className='contact-section-p'
 							style={{ color: darkMode && 'var(--bg-color)' }}>
-							<b>What's your idea?</b> Tell me about that project that it
+							<b>What's your idea?</b> Tell me about that project that it's
 							hovering in your head
 						</p>
 						<form className='contact-form' ref={form} onSubmit={sendEmail}>
 							<div className='form-input'>
-								<input type='text' name='user_name' required />
+								<input
+									type='text'
+									name='user_name'
+									className={darkMode && 'dark-mode-fields'}
+									style={{ borderColor: darkMode && 'var(--bg-color)' }}
+									required
+								/>
 								<div className='underline-1'></div>
-								<label htmlFor='user_name'>Name</label>
+								<label
+									htmlFor='user_name'
+									style={{ color: darkMode && 'var(--bg-color)' }}>
+									Name
+								</label>
 							</div>
 							<div className='form-input'>
-								<input type='text' name='user_subject' required />
+								<input
+									type='text'
+									name='user_subject'
+									className={darkMode && 'dark-mode-fields'}
+									style={{ borderColor: darkMode && 'var(--bg-color)' }}
+									required
+								/>
 								<div className='underline-2'></div>
-								<label htmlFor='user_subject'>Subject</label>
+								<label
+									htmlFor='user_subject'
+									style={{ color: darkMode && 'var(--bg-color)' }}>
+									Subject
+								</label>
 							</div>
 							<div className='form-input'>
-								<input type='text' name='user_email' required />
+								<input
+									type='text'
+									name='user_email'
+									className={darkMode && 'dark-mode-fields'}
+									style={{ borderColor: darkMode && 'var(--bg-color)' }}
+									required
+								/>
 								<div className='underline-3'></div>
-								<label htmlFor='user_email'>Email</label>
+								<label
+									htmlFor='user_email'
+									style={{ color: darkMode && 'var(--bg-color)' }}>
+									Email
+								</label>
 							</div>
 							<div className='form-input'>
-								<textarea resizable='false' name='message' required />
+								<textarea
+									resizable='false'
+									name='message'
+									className={darkMode && 'dark-mode-fields'}
+									style={{ borderColor: darkMode && 'var(--bg-color)' }}
+									required
+								/>
 								<div className='underline-4'></div>
-								<label htmlFor='user_message'>Message</label>
+								<label
+									htmlFor='user_message'
+									style={{ color: darkMode && 'var(--bg-color)' }}>
+									Message
+								</label>
 							</div>
 							<button>Submit</button>
 						</form>
