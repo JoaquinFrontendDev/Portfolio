@@ -94,12 +94,12 @@
 }
 
 .slider-modal h3 {
-	font-size: clamp(20px, 2vw, 25px);
+	font-size: clamp(18px, 2vw, 25px);
 	padding: 3em;
 }
 
 .slider-modal p {
-	font-size: clamp(10px, 1.5vw, 12px);
+	font-size: clamp(8px, 1.5vw, 12px);
 	padding: 0 2em;
 	font-weight: bold;
 	width: 70%;
@@ -112,6 +112,7 @@
 	display: flex;
 	gap: 2em;
 	font-size: 35px;
+	margin-top: 1em;
 }
 
 .slider-icons i {
@@ -123,22 +124,6 @@
 }
 
 @media screen and (max-width: 500px) {
-	.left-arrow,
-	.right-arrow {
-		z-index: 99999999999;
-		font-size: 30px;
-		color: var(--bg-color);
-	}
-	.left-arrow {
-		left: 40px;
-	}
-	.right-arrow {
-		right: 40px;
-	}
-	.slider-img {
-		width: 350px;
-		height: 300px;
-	}
 	.slider-modal h3 {
 		padding: 1.5em;
 	}

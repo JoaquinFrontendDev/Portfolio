@@ -99,6 +99,26 @@
 	}
 }
 
+@media only screen and (orientation: landscape) {
+	.services-title {
+		margin-bottom: 2em;
+		margin-top: 40vh;
+		width: 175px;
+		height: 70px;
+	}
+	.services-title::after {
+		width: 170px;
+		height: 65px;
+	}
+	.services-title::before {
+		width: 500%;
+		height: 500%;
+	}
+	.services-item {
+		gap: 2em;
+	}
+}
+
 /********************** SERVICES BOTTOM ***********************/
 
 .services-bottom {
@@ -250,6 +270,18 @@ div.icon {
 }
 
 @media screen and (max-width: 500px) {
+	.services-tech-title {
+		margin-bottom: 2em;
+		width: 270px;
+		height: 70px;
+	}
+	.services-tech-title::after {
+		width: 265px;
+		height: 65px;
+	}
+}
+
+@media only screen and (orientation: landscape) {
 	.services-tech-title {
 		margin-bottom: 2em;
 		width: 270px;
