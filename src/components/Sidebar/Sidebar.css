@@ -71,7 +71,7 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	position: absolute;
-	transform: translateY(-100%);
+	transform: translateY(-100vh);
 	top: 0;
 	left: 0;
 	background: var(--color-primary);
@@ -85,7 +85,7 @@ nav {
 }
 
 .open-nav {
-	transform: translateY(0%);
+	transform: translateY(0);
 }
 
 .burger-nav a {
@@ -110,6 +110,6 @@ nav {
 
 @media screen and (max-width: 500px) {
 	.navbar-container {
-		height: 7vh;
+		height: 55px;
 	}
 }
