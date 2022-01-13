@@ -96,7 +96,7 @@
 	}
 }
 
-@media only screen and (orientation: landscape) {
+@media only devices and (orientation: landscape) {
 	.contact-title {
 		margin-top: 3em;
 		margin-bottom: 2em;

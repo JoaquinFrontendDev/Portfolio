@@ -139,7 +139,7 @@
 	}
 }
 
-@media only screen and (orientation: landscape) {
+@media only devices and (orientation: landscape) {
 	.works-title {
 		margin-bottom: 2em;
 		width: 260px;

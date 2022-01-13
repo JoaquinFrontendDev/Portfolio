@@ -99,7 +99,7 @@
 	}
 }
 
-@media only screen and (orientation: landscape) {
+@media only devices and (orientation: landscape) {
 	.services-title {
 		margin-bottom: 2em;
 		margin-top: 40vh;
@@ -281,7 +281,7 @@ div.icon {
 	}
 }
 
-@media only screen and (orientation: landscape) {
+@media only devices and (orientation: landscape) {
 	.services-tech-title {
 		margin-bottom: 2em;
 		width: 270px;
