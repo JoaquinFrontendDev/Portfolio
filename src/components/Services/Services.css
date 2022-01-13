@@ -99,10 +99,9 @@
 	}
 }
 
-@media only devices and (orientation: landscape) {
+@media devices and (orientation: landscape) {
 	.services-title {
 		margin-bottom: 2em;
-		margin-top: 40vh;
 		width: 175px;
 		height: 70px;
 	}

@@ -1,5 +1,6 @@
 .wrapper {
-	height: 100vh;
+	min-height: 100vh;
+	height: 100%;
 	width: 100%;
 	max-width: 100vw;
 	display: grid;
@@ -91,6 +92,12 @@ h1.wrapper-presentation {
 	}
 	.wrapper-name-item {
 		justify-content: center;
+	}
+}
+
+@media only devices and (orientation: landscape) {
+	.wrapper {
+		margin-bottom: 20vh;
 	}
 }
 
