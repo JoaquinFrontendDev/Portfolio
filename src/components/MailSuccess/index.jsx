@@ -39,7 +39,7 @@ const MailSuccess = () => {
 			<Confetti
 				width={window.clientWidth}
 				height={window.clientHeight}
-				numberOfPieces={300}
+				numberOfPieces={250}
 			/>
 			<div
 				className='mail-success-container'
