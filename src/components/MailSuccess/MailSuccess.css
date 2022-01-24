@@ -55,7 +55,7 @@ html {
 	font-size: clamp(2em, 2.5vw, 4em);
 }
 
-p {
+.mail-success-container p {
 	font-size: clamp(1.25em, 1.25vw, 2.5em);
 }
 
