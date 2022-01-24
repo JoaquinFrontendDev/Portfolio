@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Home from './components/Home'
 import Services from './components/Services'
 import Works from './components/Works'

@@ -3,10 +3,12 @@ import './Contact.css'
 import emailjs from '@emailjs/browser'
 import { ThemeContext } from '../../context'
 import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Contact = () => {
 	const theme = useContext(ThemeContext)
 	const darkMode = theme.state.darkMode
+	const navigate = useNavigate()
 	const form = useRef()
 	const sendEmail = (e) => {
 		e.preventDefault()
@@ -24,7 +26,8 @@ const Contact = () => {
 				},
 				(error) => {
 					console.log(error.text)
-				}
+				},
+				navigate('/success')
 			)
 		e.target.reset()
 	}
