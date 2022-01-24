@@ -33,7 +33,7 @@ const MailSuccess = () => {
 		}
 		if (seconds === 0) navigate('/')
 	}
-	// redirect()
+	redirect()
 	return (
 		<>
 			<Confetti
