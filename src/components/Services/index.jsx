@@ -88,7 +88,7 @@ const Services = () => {
 				<div className='services-item'>
 					<div className='icon'>
 						<i
-							className='fa fa-mobile-alt'
+							className='fa fa-universal-access'
 							style={{ color: darkMode && 'var(--bg-color)' }}></i>
 					</div>
 					<div className='services-item-title'>
