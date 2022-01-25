@@ -2,7 +2,6 @@ import React from 'react'
 import { ThemeContext } from '../../context'
 import { useContext } from 'react'
 import './Sidebar.css'
-import { motion } from 'framer-motion'
 
 const Sidebar = () => {
 	const theme = useContext(ThemeContext)

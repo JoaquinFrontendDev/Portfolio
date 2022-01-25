@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './MailSuccess.css'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -22,7 +22,7 @@ const MailSuccess = () => {
 		hidden: { opacity: 0 },
 	}
 
-	const [seconds, setSeconds] = useState(10)
+	const [seconds, setSeconds] = useState(5)
 	const navigate = useNavigate()
 	const redirect = () => {
 		if (seconds > 0) {
@@ -38,8 +38,10 @@ const MailSuccess = () => {
 		<>
 			<Confetti
 				width={window.clientWidth}
-				height={window.clientHeight}
-				numberOfPieces={250}
+				height={window.innerHeight}
+				numberOfPieces={200}
+				friction={0.97}
+				gravity={0.1}
 			/>
 			<div
 				className='mail-success-container'
@@ -78,7 +80,7 @@ const MailSuccess = () => {
 					style={{
 						color: darkMode ? 'var(--bg-color)' : 'var(--color-black)',
 					}}>
-					You're being redirected back in {seconds} seconds...
+					You're being redirected back in a few seconds...
 				</motion.p>
 			</div>
 		</>
