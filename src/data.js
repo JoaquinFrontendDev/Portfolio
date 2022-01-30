@@ -25,4 +25,12 @@ export const products = [
 		link: 'https://cookyapp.netlify.app/',
 		github: 'https://github.com/SintaxisDev/Cooky-Recipe-App',
 	},
+	{
+		id: 4,
+		title: 'Weather App',
+		description: `Pretty straight foward SPA, made in a day maybe two, super simple, it does what it needs to do. No challenges on this one, used OpenWeatherMap, easy to use, very handy API. This quick project was one of my 3/4 fundamentals to learn React, and wanted to make it before I start learning React Native. Maybe in the future some tweaks will be done, but the main idea wasn't anything fancy but pragmatic`,
+		img: [require('./assets/images/weatherapp.jpg')],
+		link: 'https://simpleweather-forecast.netlify.app/',
+		github: 'https://github.com/SintaxisDev/WeatherApp',
+	},
 ]
